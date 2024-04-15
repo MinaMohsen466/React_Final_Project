@@ -1,0 +1,92 @@
+.auth-container {
+  .box-container {
+    width: 70%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 2rem;
+    margin: 3.5rem auto;
+    border-radius: 1rem;
+    filter: drop-shadow(5px 10px 5px gray);
+    border: 2px solid black;
+    border-left: 1rem solid $maincolor;
+    background-image: url("src/images/wesley.jpg");
+    background-size: cover;
+    .btn-container {
+      width: 20%;
+      height: 60%;
+      color: blue;
+      font-size: 2rem;
+      button {
+        width: 100%;
+        height: 7vh;
+        padding: 1.2rem;
+        margin-bottom: 1rem;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        background-color: white;
+        border: 1px solid gray;
+        &.active {
+          border: 3px solid $maincolor;
+          font-weight: bolder;
+          filter: drop-shadow(4px 8px 1px rgba(151, 150, 150, 0.5));
+        }
+      }
+    }
+    .form-container {
+      width: 70%;
+      height: 80%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .auth-container {
+    .box-container {
+      width: 90%;
+      height: 55vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-inline: 0.5rem;
+      margin: 10rem auto;
+      border-radius: 1rem;
+      filter: drop-shadow(5px 10px 5px gray);
+      border-top: 1rem solid $maincolor;
+      border-left: none;
+      .btn-container {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        button {
+          height: 4vh;
+          padding: 1.2rem;
+          margin-bottom: 1rem;
+          border-radius: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.2rem;
+          background-color: white;
+          border: 1px solid gray;
+        }
+      }
+      .form-container {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+  }
+}

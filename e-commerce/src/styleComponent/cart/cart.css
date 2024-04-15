@@ -1,0 +1,32 @@
+.cart-container {
+  width: 100%;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block: 2rem;
+  padding: 1rem;
+}
+.cart-container .cart-box {
+  width: 40%;
+}
+.cart-container .cart-box .cart-Data {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  background-color: gray;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.cart-container .cart-box img {
+  width: 6rem;
+  height: 7rem;
+}
+.cart-container .cart-Price {
+  width: 25%;
+  padding: 1rem;
+  background-color: red;
+}/*# sourceMappingURL=cart.css.map */

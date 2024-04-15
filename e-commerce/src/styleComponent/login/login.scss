@@ -1,0 +1,51 @@
+.inputData {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0;
+  label {
+    font-size: 1.2rem;
+  }
+  input {
+    width: 60%;
+    height: 8vh;
+    border-radius: 1rem;
+    border: none;
+    padding-inline-start: 1rem;
+    margin: 0.5rem 0;
+    border: 2px solid black;
+  }
+}
+.form-btn {
+  button {
+    background-color: $maincolor;
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .inputData {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
+    label {
+      font-size: 1.2rem;
+      font-weight: bolder;
+    }
+    input {
+      width: 130%;
+      height: 4.5vh;
+      margin: 0.5rem 0;
+      border: 2px solid black;
+    }
+  }
+  .form-btn {
+    button {
+      width: 7rem;
+    }
+  }
+}
