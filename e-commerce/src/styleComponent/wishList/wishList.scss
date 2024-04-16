@@ -28,14 +28,14 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.5);
       }
     }
-    :nth-child(2) {
+    .textData {
       width: 100%;
-      height: 19%;
+      height: 20%;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding-inline: 0.5rem;
-      :nth-child(1) {
+      .textBox {
         width: 80%;
         height: 100%;
         font-size: 1rem;
@@ -43,16 +43,21 @@
         flex-direction: column;
         align-content: space-between;
         justify-content: center;
+        padding-block: 0.5rem;
       }
-      :nth-child(2) {
+      .iconBox {
         width: 20%;
         height: 100%;
         display: flex;
         flex-direction: column;
-        svg {
-          width: 1.9rem;
-          color: black;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        span {
           cursor: pointer;
+          svg {
+            width: 2rem;
+          }
         }
       }
     }

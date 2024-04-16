@@ -4,14 +4,15 @@ import { CiHeart } from "react-icons/ci";
 import { FaRegUserCircle } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { FaList } from "react-icons/fa";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import AuthAxios from "../../configAxios/AuthAxios";
-import { Allcontext } from "../../context/Context";
+
 const Navbar = () => {
-  const { cart_count } = useSelector((state) => state.counter);
+  const { cart_count, heart_count } = useSelector((state) => state.counter);
   const [active, setActive] = useState(false);
   const [cartData, setCartData] = useState([]);
-  const { wishListLength } = useContext(Allcontext);
+  const [wishListData, setwishListData] = useState([]);
+  // const { wishListLength } = useContext(Allcontext);
 
   async function fetchCartData() {
     try {
@@ -21,9 +22,23 @@ const Navbar = () => {
       console.log(err);
     }
   }
+  async function handelWishList() {
+    try {
+      const { data } = await AuthAxios({
+        url: "/wishList",
+      });
+      setwishListData(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
   useEffect(() => {
     fetchCartData();
   }, [cart_count]);
+
+  useEffect(() => {
+    handelWishList();
+  }, [heart_count]);
 
   return (
     <div>
@@ -49,7 +64,7 @@ const Navbar = () => {
           <Link to={"/wishList"} className="icons">
             <CiHeart />
           </Link>
-          <div className="heart-counter">{wishListLength}</div>
+          <div className="heart-counter">{wishListData.length}</div>
           <Link to={"/cart"} className="icons">
             <IoMdCart />
           </Link>

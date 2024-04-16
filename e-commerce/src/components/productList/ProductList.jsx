@@ -5,13 +5,12 @@ import { Link } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
 import { IoMdCart } from "react-icons/io";
 import { FaArrowCircleRight } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { cart_increment, heart_increment } from "../../store/cartStore";
 import Loading from "../loading/Loading";
 import AuthAxios from "../../configAxios/AuthAxios";
 
 const ProductList = () => {
-  const { cart_count } = useSelector((state) => state.counter);
   const dispatch = useDispatch();
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -65,7 +64,7 @@ const ProductList = () => {
 
   useEffect(() => {
     AllProduct();
-  }, [cart_count]);
+  }, []);
   return (
     <div className="productList-container" id="productList-container">
       {loading ? (
